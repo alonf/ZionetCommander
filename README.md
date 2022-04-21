@@ -5,6 +5,7 @@ An elementary command dispatcher library that works with .NET Microsoft Dependen
 ## A simple example:
 
 Add the following code to the services setup code:
+
     builder.Services.ConfigureCommander();
     builder.Services.AddSingleton<ICommandHandler, Zionet.Extension.Command.Example.Controllers.CommandHandler>();
 
