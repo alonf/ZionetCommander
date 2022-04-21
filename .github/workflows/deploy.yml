@@ -19,12 +19,12 @@ jobs:
       run: ls -lR .
       shell: bash
     - name: Create Nuget Package
-      run: dotnet pack -c Release /p:VersionNumber=${{ github.event.release.tag_name}} /p:PackageReleaseNotes="See https://github.com/alonf/ZionetCommander/releases/tag/${{github.event.release.tag_name}}" ZionetCommander/Zionet.Extensions.Command.csproj
+      run: dotnet pack -c Release /p:VersionNumber=${{ github.event.release.tag_name}} /p:PackageReleaseNotes="See https://github.com/alonf/ZionetCommander/releases/tag/${{github.event.release.tag_name}}" ./Zionet.Extensions.Command/Zionet.Extensions.Command.csproj
     - name: Archive Nuget Package for Zionet.Extensions.Command
       uses: actions/upload-artifact@v1
       with:
         name: packages
-        path: "ZionetCommander/bin/Release/Zionet.Extensions.Command.${{github.event.release.tag_name}}.nupkg"
+        path: "./Zionet.Extensions.Command/bin/Release/Zionet.Extensions.Command.${{github.event.release.tag_name}}.nupkg"
     - name: Publish Nuget Package
       run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json
 
