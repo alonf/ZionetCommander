@@ -9,6 +9,7 @@ Add the following code to the services setup code:
     builder.Services.ConfigureCommander();
     builder.Services.AddSingleton<ICommandHandler, Zionet.Extension.Command.Example.Controllers.CommandHandler>();
 
+You may register multiple ICommandHandler types.
 
 Create a handler class:
 
