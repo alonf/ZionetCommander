@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zionet.Extensions.Command.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zionet.Extension.Command.Example", "Zionet.Extension.Command.Example\Zionet.Extension.Command.Example.csproj", "{DA7C903F-53F0-4695-9D6D-67CD410A927A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{CB23155A-5C2F-4685-898A-79E1D7A15BB3}"
+	ProjectSection(SolutionItems) = preProject
+		build.yml = build.yml
+		deploy.yml = deploy.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
