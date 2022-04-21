@@ -15,7 +15,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.0.x
-
+    - name: Display the path
+      run: ls -lR .
+      shell: bash
     - name: Create Nuget Package
       run: dotnet pack -c Release /p:VersionNumber=${{ github.event.release.tag_name}} /p:PackageReleaseNotes="See https://github.com/alonf/ZionetCommander/releases/tag/${{github.event.release.tag_name}}" ZionetCommander/Zionet.Extensions.Command.csproj
     - name: Archive Nuget Package for Zionet.Extensions.Command
