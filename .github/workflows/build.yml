@@ -23,12 +23,15 @@ jobs:
         
     - name: Restore dependencies
       run: dotnet restore
+      working-directory: ./ZionetCommander
      
     - name: Build
       run: dotnet build -c Release --no-restore
+      working-directory: ./ZionetCommander
 
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
+      working-directory: ./ZionetCommander
 
 
       
